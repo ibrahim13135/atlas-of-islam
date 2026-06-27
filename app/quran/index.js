@@ -9,8 +9,8 @@ import { fetchQuranPage, SURAH_LIST } from '../../services/quranApi';
 import { Colors } from '../../constants/Colors';
 
 export default function QuranScreen() {
-  var _params = useLocalSearchParams();
-  var [page, setPage] = useState(parseInt(_params.page) || 1);
+  var params = useLocalSearchParams();
+  var [page, setPage] = useState(parseInt(params.page) || 1);
   var [pageData, setPageData] = useState(null);
   var [loading, setLoading] = useState(true);
   var [error, setError] = useState(null);
